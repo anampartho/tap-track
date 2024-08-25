@@ -21,7 +21,9 @@ const LeftNavigation = () => {
           <Anchor href={menuItem.href} key={menuItem.id}>
             <MenuItem>
               <ListItemIcon>{menuItem.icon}</ListItemIcon>
-              <Typography fontWeight="medium">{menuItem.name}</Typography>
+              <Typography fontWeight="medium" variant="body2">
+                {menuItem.name}
+              </Typography>
             </MenuItem>
           </Anchor>
         ))}

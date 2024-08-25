@@ -16,12 +16,19 @@ export interface LeftNavMenuItem {
   id: string;
 }
 
+const iconSize = 'small';
+
 export const leftNavMenuItems: LeftNavMenuItem[] = [
-  { id: 'time', name: 'Tracker', icon: <TimerOutlined />, href: '/time' },
+  {
+    id: 'time',
+    name: 'Tracker',
+    icon: <TimerOutlined fontSize={iconSize} />,
+    href: '/time',
+  },
   {
     id: 'time-sheets',
     name: 'Time Sheets',
-    icon: <BrowseGalleryOutlined />,
+    icon: <BrowseGalleryOutlined fontSize={iconSize} />,
     href: '/time',
   },
   {
@@ -30,18 +37,28 @@ export const leftNavMenuItems: LeftNavMenuItem[] = [
     icon: <FolderCopyOutlined />,
     href: '/projects',
   },
-  { id: 'team', name: 'Team', icon: <PeopleAltOutlined />, href: '/time' },
+  {
+    id: 'team',
+    name: 'Team',
+    icon: <PeopleAltOutlined fontSize={iconSize} />,
+    href: '/time',
+  },
   {
     id: 'reports',
     name: 'Reports',
-    icon: <AutoGraphOutlined />,
+    icon: <AutoGraphOutlined fontSize={iconSize} />,
     href: '/time',
   },
   {
     id: 'invoices',
     name: 'Invoices',
-    icon: <RequestQuoteOutlined />,
+    icon: <RequestQuoteOutlined fontSize={iconSize} />,
     href: '/time',
   },
-  { id: 'manage', name: 'Manage', icon: <SettingsOutlined />, href: '/time' },
+  {
+    id: 'manage',
+    name: 'Manage',
+    icon: <SettingsOutlined fontSize={iconSize} />,
+    href: '/time',
+  },
 ];

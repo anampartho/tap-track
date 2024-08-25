@@ -1,7 +1,7 @@
-import { IBM_Plex_Sans } from 'next/font/google';
+import { Archivo } from 'next/font/google';
 
-export const font = IBM_Plex_Sans({
-  weight: ['300', '400', '500', '700'],
+export const font = Archivo({
+  weight: ['300', '400', '500', '700', '900'],
   subsets: ['latin'],
   display: 'swap',
 });
