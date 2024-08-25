@@ -1,12 +1,13 @@
-import { ReactNode } from 'react';
 import {
-  CgChart,
-  CgDollar,
-  CgFolder,
-  CgOptions,
-  CgStopwatch,
-  CgUserList,
-} from 'react-icons/cg';
+  AutoGraphOutlined,
+  BrowseGalleryOutlined,
+  FolderCopyOutlined,
+  PeopleAltOutlined,
+  RequestQuoteOutlined,
+  SettingsOutlined,
+  TimerOutlined,
+} from '@mui/icons-material';
+import { ReactNode } from 'react';
 
 export interface LeftNavMenuItem {
   name: string;
@@ -16,10 +17,31 @@ export interface LeftNavMenuItem {
 }
 
 export const leftNavMenuItems: LeftNavMenuItem[] = [
-  { id: 'time', name: 'Tracker', icon: <CgStopwatch />, href: '/time' },
-  { id: 'projects', name: 'Projects', icon: <CgFolder />, href: '/projects' },
-  { id: 'team', name: 'Team', icon: <CgUserList />, href: '/time' },
-  { id: 'reports', name: 'Reports', icon: <CgChart />, href: '/time' },
-  { id: 'invoices', name: 'Invoices', icon: <CgDollar />, href: '/time' },
-  { id: 'manage', name: 'Manage', icon: <CgOptions />, href: '/time' },
+  { id: 'time', name: 'Tracker', icon: <TimerOutlined />, href: '/time' },
+  {
+    id: 'time-sheets',
+    name: 'Time Sheets',
+    icon: <BrowseGalleryOutlined />,
+    href: '/time',
+  },
+  {
+    id: 'projects',
+    name: 'Projects',
+    icon: <FolderCopyOutlined />,
+    href: '/projects',
+  },
+  { id: 'team', name: 'Team', icon: <PeopleAltOutlined />, href: '/time' },
+  {
+    id: 'reports',
+    name: 'Reports',
+    icon: <AutoGraphOutlined />,
+    href: '/time',
+  },
+  {
+    id: 'invoices',
+    name: 'Invoices',
+    icon: <RequestQuoteOutlined />,
+    href: '/time',
+  },
+  { id: 'manage', name: 'Manage', icon: <SettingsOutlined />, href: '/time' },
 ];
