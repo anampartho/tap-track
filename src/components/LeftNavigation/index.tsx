@@ -19,8 +19,18 @@ const LeftNavigation = () => {
       <MenuList>
         {leftNavMenuItems.map((menuItem) => (
           <Anchor href={menuItem.href} key={menuItem.id}>
-            <MenuItem>
-              <ListItemIcon>{menuItem.icon}</ListItemIcon>
+            <MenuItem
+              sx={{
+                columnGap: 2,
+              }}
+            >
+              <ListItemIcon
+                sx={{
+                  justifyContent: 'center',
+                }}
+              >
+                {menuItem.icon}
+              </ListItemIcon>
               <Typography fontWeight="medium" variant="body2">
                 {menuItem.name}
               </Typography>
