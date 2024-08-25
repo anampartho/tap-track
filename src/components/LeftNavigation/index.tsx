@@ -22,8 +22,8 @@ const LeftNavigation = () => {
       </DrawerHeader>
       <MenuList>
         {leftNavMenuItems.map((menuItem) => (
-          <Anchor href={menuItem.href}>
-            <MenuItem key={menuItem.id}>
+          <Anchor href={menuItem.href} key={menuItem.id}>
+            <MenuItem>
               <ListItemIcon>{menuItem.icon}</ListItemIcon>
               {menuItem.name}
             </MenuItem>
