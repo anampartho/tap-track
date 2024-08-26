@@ -5,6 +5,7 @@ const DrawerHeader = styled('div')(({ theme }) => ({
   padding: theme.spacing(1, 2),
   borderBottom: '1px solid #eee',
   height: '60px',
+  minHeight: '60px',
 }));
 
 export default DrawerHeader;
