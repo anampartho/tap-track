@@ -7,7 +7,7 @@ import { userData } from './constants';
 const SidebarUser = () => {
   return (
     <Box display="flex" gap={1} alignItems="center">
-      <Avatar variant="outlined" size="sm" />
+      <Avatar variant="outlined" size="sm" src={userData.image} />
       <Box sx={{ minWidth: 0, flex: 1 }}>
         <Typography level="title-sm">{userData.name}</Typography>
         <Typography level="body-xs">{userData.email}</Typography>
