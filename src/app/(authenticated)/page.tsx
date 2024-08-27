@@ -1,9 +1,6 @@
-import { Typography } from '@mui/joy';
+import PageTemplate from '@/components/PageTemplate';
+import { userData } from '@/components/SidebarUser/constants';
 
 export default function Home() {
-  return (
-    <Typography level="h2" component="h1">
-      Orders
-    </Typography>
-  );
+  return <PageTemplate pageTitle={`Hi, ${userData.name}!`} />;
 }

@@ -14,7 +14,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <Box display="flex" minHeight="100dvh">
+    <Box display="flex" minHeight="100dvh" width="100dvw">
       <Header />
       <Sidebar />
       <Box
