@@ -1,7 +1,9 @@
+import { Typography } from '@mui/joy';
+
 export default function Home() {
   return (
-    <main>
-      Hello <strong>Next.js 14</strong> World!
-    </main>
+    <Typography level="h2" component="h1">
+      Orders
+    </Typography>
   );
 }
