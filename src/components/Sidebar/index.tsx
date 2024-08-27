@@ -1,32 +1,23 @@
 'use client';
-import ColorSchemeToggle from '@/components/ColorSchemeToggle';
 import SidebarMenu from '@/components/SidebarMenu';
 import {
   sidebarMainMenuItems,
   sidebarOtherMenuItems,
 } from '@/components/SidebarMenu/constants';
 import { closeSidebar } from '@/utils/toggleSidebar';
-import BrightnessAutoRoundedIcon from '@mui/icons-material/BrightnessAutoRounded';
-import LogoutRoundedIcon from '@mui/icons-material/LogoutRounded';
-import Avatar from '@mui/joy/Avatar';
 import Box from '@mui/joy/Box';
 import Divider from '@mui/joy/Divider';
 import GlobalStyles from '@mui/joy/GlobalStyles';
-import IconButton from '@mui/joy/IconButton';
 import { listItemButtonClasses } from '@mui/joy/ListItemButton';
 import Sheet from '@mui/joy/Sheet';
-import Typography from '@mui/joy/Typography';
+import CompanyInfo from '../CompanyInfo';
+import SidebarUser from '../SidebarUser';
 
 const Sidebar = () => {
   return (
     <Sheet
       className="Sidebar"
       sx={{
-        position: { xs: 'fixed', md: 'sticky' },
-        transform: {
-          xs: 'translateX(calc(100% * (var(--SideNavigation-slideIn, 0) - 1)))',
-          md: 'none',
-        },
         transition: 'transform 0.4s, width 0.4s',
         zIndex: 10000,
         height: '100dvh',
@@ -70,13 +61,7 @@ const Sidebar = () => {
         }}
         onClick={() => closeSidebar()}
       />
-      <Box sx={{ display: 'flex', gap: 1, alignItems: 'center' }}>
-        <IconButton variant="soft" color="primary" size="sm">
-          <BrightnessAutoRoundedIcon />
-        </IconButton>
-        <Typography level="title-lg">Tap Track</Typography>
-        <ColorSchemeToggle sx={{ ml: 'auto' }} />
-      </Box>
+      <CompanyInfo />
       <Box
         sx={{
           minHeight: 0,
@@ -100,16 +85,7 @@ const Sidebar = () => {
         />
       </Box>
       <Divider />
-      <Box sx={{ display: 'flex', gap: 1, alignItems: 'center' }}>
-        <Avatar variant="outlined" size="sm" />
-        <Box sx={{ minWidth: 0, flex: 1 }}>
-          <Typography level="title-sm">Siriwat K.</Typography>
-          <Typography level="body-xs">siriwatk@test.com</Typography>
-        </Box>
-        <IconButton size="sm" variant="plain" color="neutral">
-          <LogoutRoundedIcon />
-        </IconButton>
-      </Box>
+      <SidebarUser />
     </Sheet>
   );
 };
